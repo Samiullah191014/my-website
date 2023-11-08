@@ -1,0 +1,26 @@
+
+/* Cursor.css */
+.custom-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid orangered;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+    z-index: 9999; /* Ensure the cursor appears on top of other elements */
+  }
+  
+  .inner-dot {
+    width: 10px;
+    height: 10px;
+    background: orangered;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  

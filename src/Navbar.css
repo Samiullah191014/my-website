@@ -1,0 +1,125 @@
+
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  color: orangered;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #555; /* Change tab text color */
+  transition: color 0.3s; /* Smooth color transition */
+  position: relative;
+}
+
+.tabs a:hover {
+  color: orangered; /* Change tab text color on hover */
+  text-decoration: underline; /* Add underline on hover */
+  cursor: pointer;
+}
+
+.tabs a::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: orangered;
+  border-radius: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.tabs a:hover::before {
+  opacity: 1;
+  top: calc(100% + 5px); /* Adjust the distance from the text */
+  transform: translateX(-50%) scale(1);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .tabs {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .menu-open .tabs {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    margin-left: -22px;
+    width: 380px;
+    
+  }
+
+  .menu-open .menu-icon {
+    transform: rotate(90deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
