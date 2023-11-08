@@ -36,9 +36,15 @@ const Home = () => {
             <div className="d-flex gap-4 justify-content-center justify-content-lg-start ">
               <button className="btn rounded-pill" onClick={scrollToAboutMe}><span>About Me</span></button>
               <div className="d-flex gap-2">
-                <span><BiLogoFacebook className="fs-5 pointer" /></span>
-                <span><BiLogoTwitter className="fs-5 pointer" /></span>
-                <span><FaLinkedinIn className="fs-5 pointer" /></span>
+                <a href="https://www.facebook.com/profile.php?id=100084137440075&mibextid=ZbWKwL">
+                <span><BiLogoFacebook className="fs-5 pointer text-black" /></span>
+              </a>
+              <a href="https://twitter.com/Samiull72617599?t=R6CxmDKXGyHmstsu3T-p2w&s=09">
+                <span><BiLogoTwitter className="fs-5 pointer text-black" /></span>
+              </a>
+              <a href="https://www.linkedin.com/in/samullah?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                <span><FaLinkedinIn className="fs-5 pointer text-black" /></span>
+              </a>
               </div>
             </div>
           </div>
